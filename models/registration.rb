@@ -63,4 +63,8 @@ class Registration
       SqlRunner.run(sql, values)
     end
 
-end
+    def self.delete_all
+      sql = "DELETE FROM registrations"
+      SqlRunner.run( sql )
+    end
+  end

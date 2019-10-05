@@ -3,7 +3,9 @@ require_relative("../models/activity.rb")
 require_relative( "../models/registration.rb" )
 require("pry-byebug")
 
-# Member.delete_all()
+Registration.delete_all()
+Member.delete_all()
+Activity.delete_all()
 
 member1 = Member.new({
   "first_name" => "Raffaele",
