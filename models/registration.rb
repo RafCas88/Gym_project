@@ -26,6 +26,12 @@ class Registration
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM registrations"
+    results = SqlRunner.run( sql )
+    return results.map { |registration| Registration.new( registration ) }
+  end
+
   def activity()
     sql = "SELECT * FROM activities
     WHERE id = $1"

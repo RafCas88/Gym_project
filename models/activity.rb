@@ -39,6 +39,12 @@ class Activity
     return results.map { |member| Member.new(member) }
   end
 
+  def self.all()
+    sql = "SELECT * FROM activities"
+    results = SqlRunner.run( sql )
+    return results.map { |activity| Activity.new( activity ) }
+  end
+
   def update()
     sql = "UPDATE activities
     SET
