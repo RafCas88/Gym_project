@@ -27,6 +27,22 @@ class Member
     @id = results.first()['id'].to_i
   end
 
+  def activities
+    sql = "SELECT activities.* FROM activities
+    INNER JOIN registrations
+    ON registrations.activity_id = activities.id
+    WHERE member_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |activity| Activity.new(activity) }
+  end
+
+  def self.all()
+    sql = "SELECT * FROM members"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Member.new( hash ) }
+  end
+
   def update()
     sql = "UPDATE members
     SET

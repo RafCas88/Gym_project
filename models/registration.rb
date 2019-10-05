@@ -26,6 +26,22 @@ class Registration
     @id = results.first()['id'].to_i
   end
 
+  def activity()
+    sql = "SELECT * FROM activities
+    WHERE id = $1"
+    values = [@activity_id]
+    results = SqlRunner.run( sql, values )
+    return Activity.new( results.first )
+  end
+
+  def member()
+    sql = "SELECT * FROM members
+    WHERE id = $1"
+    values = [@member_id]
+    results = SqlRunner.run( sql, values )
+    return Member.new( results.first )
+  end
+
   def update()
     sql = "UPDATE registrations
     SET
