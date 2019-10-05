@@ -25,4 +25,26 @@ class Registration
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
+
+  def update()
+    sql = "UPDATE registrations
+    SET
+    (
+      member_id,
+      activity_id,
+      ) =
+      (
+        $1, $2
+      )
+      WHERE id = $3"
+      values = [@member_id, @activity_id, @id]
+      SqlRunner.run( sql, values )
+    end
+
+    def delete()
+      sql = "DELETE FROM registrations where id = $1"
+      values = [@id]
+      SqlRunner.run(sql, values)
+    end
+
 end
