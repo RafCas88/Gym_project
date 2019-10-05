@@ -1,6 +1,6 @@
 DROP TABLE registrations;
 DROP TABLE members;
-DROP TABLE classes;
+DROP TABLE activities;
 
 CREATE TABLE members
 (
@@ -9,17 +9,17 @@ CREATE TABLE members
   last_name VARCHAR(255)
 );
 
-CREATE TABLE classes
+CREATE TABLE activities
 (
   id SERIAL8 primary key,
   class_name VARCHAR(255) not null,
   day VARCHAR(255),
-  time VARCHAR(255)
+  class_time VARCHAR(255)
 );
 
 CREATE TABLE registrations
 (
   id SERIAL8 primary key,
   member_id INT8 references members(id),
-  class_id INT8 references classes(id)
+  activity_id INT8 references activities(id)
 );
