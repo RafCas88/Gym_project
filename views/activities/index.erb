@@ -1,4 +1,5 @@
 <% @activities.each do |activity| %>
 <p>Name: <%= activity.class_name() %> <%= activity.day() %><%= activity.class_time() %></p>
+<a href="/activities/<%= activity.id %>"><%= activity.class_name %></a>
 <hr />
 <% end %>

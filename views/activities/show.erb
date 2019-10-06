@@ -1,0 +1,11 @@
+<h2><%= @activity.class_name %> (activity)</h2>
+
+<p>Day: <%= @activity.day %></p>
+
+<h3>Time: <%= @activity.class_time %></h3>
+
+<ul>
+  <% @activity.members.each do |member| %>
+  <li><%= member.name %></li>
+  <% end %>
+</ul>
