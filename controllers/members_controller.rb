@@ -7,3 +7,8 @@ get '/members' do
   @members = Member.all()
   erb ( :"members/index" )
 end
+
+get '/members/new' do
+  @members = Member.all
+  erb(:"members/new")
+end
