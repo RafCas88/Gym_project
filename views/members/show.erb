@@ -1,1 +1,3 @@
-<%# <a href="/members/<%= @member.id %>"></a> %>
+<h2><%= @member.first_name() %><%= @member.last_name() %></h2>
+<a href="/members/<%= @member.id %>/edit">Edit</a>
+<form action="/members/<%= @member.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
