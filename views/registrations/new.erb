@@ -1,0 +1,23 @@
+<h1>Registration!</h1>
+
+<form action="/registrations" method="post">
+  <label>
+  Select a member:
+    <select name="member_id">
+      <% for member in @members %>
+      <option value="<%= member.id %>"><%= member.first_name %><%= member.last_name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label>
+    Select a class:
+    <select name="activity_id">
+      <% for activity in @activities %>
+      <option value="<%= activity.id %>"><%= activity.class_name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input type='submit' value="Registration!">
+</form>

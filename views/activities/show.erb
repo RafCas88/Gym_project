@@ -4,8 +4,10 @@
 
 <h3>Time: <%= @activity.class_time %></h3>
 
+<h3>Members:</h3>
+
 <ul>
   <% @activity.members.each do |member| %>
-  <li><%= member.name %></li>
+  <li><%= member.first_name %></li>
   <% end %>
 </ul>

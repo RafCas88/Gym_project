@@ -8,6 +8,11 @@ get '/activities' do
   erb ( :"activities/index" )
 end
 
+get '/activities/new' do
+  @activities = Activity.all
+  erb(:"activities/new")
+end
+
 get '/activities/:id' do
   @activity = Activity.find(params['id'])
   erb(:"activities/show")
