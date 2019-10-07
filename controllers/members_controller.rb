@@ -15,7 +15,7 @@ end
 
 post '/members' do
   Member.new(params).save
-  redirect to '/members'
+  erb(:"members/create")
 end
 
 get '/members/:id' do

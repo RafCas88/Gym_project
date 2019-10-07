@@ -13,6 +13,11 @@ get '/activities/new' do
   erb(:"activities/new")
 end
 
+post '/members' do
+  Member.new(params).save
+  erb(:"members/create")
+end
+
 get '/activities/:id' do
   @activity = Activity.find(params['id'])
   erb(:"activities/show")
