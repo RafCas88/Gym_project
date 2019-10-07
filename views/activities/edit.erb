@@ -1,0 +1,13 @@
+<form method="post" action="/activities/<%= @activity.id %>">
+
+  <form method="post" action="/activities/<%= @activity.id %>">
+    <label for="class-name-field">Class Name:</label>
+    <input
+    type="text"
+    name="class_name"
+    id="class-name-field"
+    value="<%= @activity.class_name %>"
+    />
+
+    <input type='submit' value="Edit Class">
+  </form>
