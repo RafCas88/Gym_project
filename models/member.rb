@@ -48,7 +48,7 @@ class Member
     SET
     (
       first_name,
-      last_name,
+      last_name
       ) =
       (
         $1, $2
