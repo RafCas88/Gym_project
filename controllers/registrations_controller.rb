@@ -18,12 +18,19 @@ get '/registrations/new' do
 end
 
 post '/registrations' do
+  registration = Registration.new(params)
+  registration.save
+  redirect to("/registrations")
+end
+
+post '/registrations' do
   registration= Registration.new(params)
   registration.save
   redirect to("/registrations")
 end
 
 post '/registrations/:id/delete' do
-  Registration.destroy(params[:id])
+  registration = Registration.find(params['id'])
+  registration.delete
   redirect to("/registrations")
 end

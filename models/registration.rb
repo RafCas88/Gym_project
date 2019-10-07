@@ -69,6 +69,14 @@ class Registration
       SqlRunner.run(sql, values)
     end
 
+    def self.find( id )
+      sql = "SELECT * FROM registrations
+      WHERE id = $1"
+      values = [id]
+      results = SqlRunner.run( sql, values )
+      return Registration.new( results.first )
+    end
+
     def self.delete_all
       sql = "DELETE FROM registrations"
       SqlRunner.run( sql )

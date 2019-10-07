@@ -1,17 +1,19 @@
 <h1>Registrations</h1>
 
-  <a href="/registrations/new">New registration!</a>
+<a href="/registrations/new">New registration!</a>
+</p>
 
 <ul>
   <% for registration in @registrations %>
   <li>
-  <p><%= registration.member.first_name %> <%= registration.member.last_name %>
-    <%= registration.activity.class_name %> </p>
-    <p>
-      <form action="/registrations/<%= registration.id %>/delete" method="POST">
-        <input type="submit" value="delete" />
-      </form>
-    </p>
-  </li>
-  <% end %>
-</ul>
+    <p><%= registration.member.first_name %> <%= registration.member.last_name %>
+      <%= registration.activity.class_name %> <%= registration.activity.day %>
+      <%= registration.activity.class_time %></p>
+      <p>
+        <form action="/registrations/<%= registration.id %>/delete" method="POST">
+          <input type="submit" value="delete" />
+        </form>
+      </p>
+    </li>
+    <% end %>
+  </ul>
