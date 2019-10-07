@@ -1,4 +1,4 @@
-<h2>Name <%= @member.first_name %> <%= @member.last_name %></h2>
+<h2>Name: <%= @member.first_name %> <%= @member.last_name %></h2>
 <p><a href="/members/<%= @member.id %>/edit">Edit Member</a></p>
 <form method="post" action="/members/<%= @member.id %>/delete">
   <input type="submit" value="Delete Member"/>
