@@ -1,4 +1,4 @@
-<h2>Name <%= @activity.class_name %> </h2>
+<h2>Name <%= @activity.class_name %> <%= @activity.day %> <%= @activity.class_time %></h2>
 <p><a href="/activities/<%= @activity.id %>/edit">Edit Class</a></p>
 <form method="post" action="/activities/<%= @activity.id %>/delete">
   <input type="submit" value="Delete Class"/>

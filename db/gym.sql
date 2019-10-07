@@ -20,6 +20,6 @@ CREATE TABLE activities
 CREATE TABLE registrations
 (
   id SERIAL8 primary key,
-  member_id INT8 references members(id),
-  activity_id INT8 references activities(id)
+  member_id INT8 references members(id) ON DELETE CASCADE,
+  activity_id INT8 references activities(id) ON DELETE CASCADE
 );

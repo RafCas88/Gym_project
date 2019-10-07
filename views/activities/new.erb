@@ -1,13 +1,15 @@
-<h2>Register for a Class</h2>
+<h2>Create Class</h2>
 <form action="/activities" method="post">
 
-  <label for="activity_select">Select Class:</label>
-   <select name="activity_id" id="activity_select">
-     <% @activities.each do |activity| %>
-         <option value=<%= activity.id %>><%= activity.class_name %></option>
-     <% end %>
-   </select>
+  <label for="class-name-field">Class Name:</label>
+  <input type="text" name="class_name" id="class-name-field"/>
 
-  <input type="submit" value="Register for a Class">
+  <label for="day-field">Day:</label>
+  <input type="text" name="day" id="day-field"/>
+
+  <label for="class-time-field">Class Time</label>
+  <input type="text" name="class_time" id="class-time-field"/>
+
+  <input type="submit" value="Create Class">
 
 </form>

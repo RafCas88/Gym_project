@@ -13,9 +13,10 @@ get '/activities/new' do
   erb(:"activities/new")
 end
 
-post '/members' do
-  Member.new(params).save
-  erb(:"members/create")
+post '/activities' do
+  activity = Activity.new(params)
+  activity.save
+  redirect to("/activities")
 end
 
 get '/activities/:id' do
