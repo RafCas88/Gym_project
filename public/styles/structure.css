@@ -1,0 +1,21 @@
+body {
+background: black url('/images/background.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+color: black;
+font-family: 'Merriweather', serif;
+padding: 0px;
+margin: 0px;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: black;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 10px;
+}

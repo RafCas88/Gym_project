@@ -23,12 +23,6 @@ post '/registrations' do
   redirect to("/registrations")
 end
 
-post '/registrations' do
-  registration= Registration.new(params)
-  registration.save
-  redirect to("/registrations")
-end
-
 post '/registrations/:id/delete' do
   registration = Registration.find(params['id'])
   registration.delete
