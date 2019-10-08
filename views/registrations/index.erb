@@ -1,9 +1,9 @@
 <h1>Registrations</h1>
 
-<a href="/registrations/new">New registration!</a>
-</p>
+<a href="/registrations/new">New registration</a>
 
-<ul>
+
+<ul class="registrations">
   <% for registration in @registrations %>
   <li>
     <p><%= registration.member.first_name %> <%= registration.member.last_name %>

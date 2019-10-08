@@ -1,21 +1,78 @@
 body {
-background: black url('/images/background.jpg');
-background-size: 100%;
-background-repeat: no-repeat;
-color: black;
-font-family: 'Merriweather', serif;
-padding: 0px;
-margin: 0px;
+  background: black url('/images/background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: black;
+  font-family: 'Merriweather', serif;
+  padding: 0px;
+  margin: 0px;
 }
 
 h1 {
   font-size: 3.5em;
   color: black;
   margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+form {
+  font-size: 1.2em;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+a {
+  margin-left: 40px;
+}
+
+.registrations {
+  display: flex;
+  flex-direction: column;
+}
+
+.area {
+  width: 300px;
+  height: 300px;
+}
+
+.bubble {
+  left: 93px;
+  top: 21px;
+  width: 135px;
+  height: 84px;
+  display: table;
+}
+
+.bubble p {
+  display: table-cell;
+  vertical-align: left;
+  text-align: left;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  padding-left: 40px;
   color: black;
-  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.btn{
+margin-left: 20px;
 }
