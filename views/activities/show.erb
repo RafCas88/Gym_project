@@ -1,8 +1,11 @@
 <h3>Name: <%= @activity.class_name %></h3>
 <h3>Day: <%= @activity.day %></h3>
 <h3>Time: <%= @activity.class_time %></h3>
-
-<p><a href="/activities/<%= @activity.id %>/edit">Edit Class</a></p>
-<form method="post" action="/activities/<%= @activity.id %>/delete">
-  <input type="submit" value="Delete Class"/>
-</form>
+<div class="Edit">
+  <p><a href="/activities/<%= @activity.id %>/edit">Edit Class</a></p>
+  <form method="post" action="/activities/<%= @activity.id %>/delete">
+    <div class="Delete">
+      <input type="submit" value="Delete Class"/>
+    </form>
+  </div>
+</div>

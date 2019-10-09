@@ -8,6 +8,10 @@ body {
   margin: 0px;
 }
 
+#registration-h1 {
+  margin-left: 75px;
+}
+
 h1 {
   font-size: 3.5em;
   color: black;
@@ -41,6 +45,16 @@ form {
 .registrations {
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+}
+.Edit {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+}
+.Delete {
+  flex-direction: column;
+  padding-top: 25px;
 }
 
 .area {
@@ -67,4 +81,9 @@ p {
   margin-left: 40px;
   color: black;
   font-weight: bold;
+}
+
+.registration{
+margin-left: 30px;
+margin-bottom: 30px;
 }
