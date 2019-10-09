@@ -38,10 +38,6 @@ form {
   margin-top: 40px;
 }
 
-a {
-  margin-left: 40px;
-}
-
 .registrations {
   display: flex;
   flex-direction: column;
@@ -68,11 +64,7 @@ a {
 
 p {
   font-size: 1.2em;
-  padding-left: 40px;
+  margin-left: 40px;
   color: black;
   font-weight: bold;
-}
-
-.btn{
-margin-left: 20px;
 }
