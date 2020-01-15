@@ -5,7 +5,7 @@ To run the app, open the Terminal and follow these steps:
 - Run the command: git clone git@github.com:RafCas88/Gym_project.git and you will have a copy of the 'gym' folder.
 - Next, navigate to the folder using the command: cd many_to_many_project_gym
 - Run the app using ruby app.rb
-- Open a new tab in the terminal and use the command: atom . text editor to check the code. 
+- Open a new tab in the terminal and use the command: atom . to view the code. 
 - To open the app in the browser open a new window and type http://localhost:4567
 - The app should be displaying.
 
